@@ -1,6 +1,8 @@
 #!bin/bash
 
-name="Archie"
+echo "What is your name?"
+
+read name
 
 echo "Good Morning $name!!"
 sleep 1
