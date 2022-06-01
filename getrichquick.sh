@@ -8,4 +8,6 @@ read age
 echo "Hello $name, you are $age years old"
 sleep 2
 
-echo "$dog"
+getrich=$((($RANDOM % 15) + $age))
+
+echo "$name, you will be a millionaire when you are $getrich years old."
