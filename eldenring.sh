@@ -42,10 +42,10 @@ read tarnished
 beast=$(( $RANDOM % 2 ))
 sleep 2
 if [[ $tarnished == $beast ]]; then
-	echo "You slay the beast! Congrats fellow tarnished"
+	echo "You slay the beast! Congrats fellow tarnished. $hp health remaining."
 else
-	echo "You Died, again!"
-	exit 1
+		echo "You died!"
+		exit 1
 fi
 
 sleep 2
@@ -61,9 +61,7 @@ beast=$(( $RANDOM % 10))
 sleep 2
 
 if [[ $tarnished == $beast || $tarnished == "coffee" ]]; then
-	if [[ $USER == "chris" ]]; then
-		echo "Beast vanquished"
-	fi
+		echo "Beast vanquished brave warrior! $hp health remaining"
 else
 	echo "You died, again"
 fi
