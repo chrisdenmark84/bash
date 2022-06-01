@@ -2,13 +2,16 @@
 
 echo "You Died"
 
-echo "Do you like coffee?(y/n)"
+#first beast
 
-read coffee
+echo "Your first beast approaches. Prepare for battle. Pick a number 0-1. (0/1)"
 
-if [[ $coffee == "y" ]]; then 
-	echo "You're awesome"
+read tarnished
+
+beast=$(( $RANDOM % 2 ))
+sleep 2
+if [[ $tarnished == $beast ]]; then
+	echo "You slay the beast! Congrats fellow tarnished"
 else
-	echo "Leave right now!!"
+	echo "You Died, again!"
 fi
-
