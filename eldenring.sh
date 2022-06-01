@@ -1,6 +1,37 @@
 #!/bin/bash
 
-echo "You Died"
+
+#pick class
+
+echo "Welcome tarnished. Please select your starting class:
+1 - Samurai
+2 - Prisoner
+3 - Prophet"
+
+read class
+
+case $class in 
+	1)
+		type="Samurai"
+		hp=10
+		attack=20
+		;;
+	2)
+		type="Prisoner"
+		hp=20
+		attack=4
+		;;
+	3)
+		type="Prophet"
+		hp=30
+		attack=4
+		;; 
+esac
+
+echo "You have chosen the $type class. Your HP is $hp and your attack is $attack."
+
+
+
 
 #first beast
 
@@ -30,7 +61,9 @@ beast=$(( $RANDOM % 10))
 sleep 2
 
 if [[ $tarnished == $beast || $tarnished == "coffee" ]]; then
-	echo "You slayed Margit! Victory is ours"
+	if [[ $USER == "chris" ]]; then
+		echo "Beast vanquished"
+	fi
 else
 	echo "You died, again"
 fi
